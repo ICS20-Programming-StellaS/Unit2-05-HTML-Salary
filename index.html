@@ -1,82 +1,35 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8" />
-    <meta name="description" content="Area and Perimeter, with JavaScript" />
-    <meta name="keywords" content="immaculata, ics2o" />
-    <meta name="author" content="Stella S" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="apple-touch-icon" sizes="180x180" href="./fav/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="./fav/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="./fav/favicon-16x16.png" />
-    <link rel="manifest" href="./fav/site.webmanifest" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
-    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.pink-red.min.css" />
-    <link rel="stylesheet" href="./css/style.css" />
-    <title>Calculate Salary, with JavaScript</title>
+    <meta charset="utf-8">
+    <meta name="description" content="User Input, with JavaScript">
+    <meta name="keywords" content="immaculata, ics2o">
+    <meta name="author" content="Stella S">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="./fav_index/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./fav_index/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./fav_index/favicon-16x16.png">
+    <link rel="manifest" href="./fav_index/site.webmanifest">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Salary, with a JS file</title>
   </head>
-  <body>
-    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+  <center><body>
     <script src="./js/script.js"></script>
-    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-      <header class="mdl-layout__header">
-        <div class="mdl-layout__header-row">
-          <span class="mdl-layout-title">Calculate Salary, with JS</span> 
-        </div>
-      </header>
-      <main class="mdl-layout__content">
-        <table>
-          <tr>
-            <th>
-              <center><h3>Formula for area of a triangle</h3></center>
-              <h4>A = (b x h)/2</h4>
-            </th>
-          </tr>
-        </table>
-        <!-- Simple Textfield -->
-        <center><form action="#">
-          <p>Base</p>
-          <div class="mdl-textfield mdl-js-textfield">
-            <input
-              class="mdl-textfield__input"
-              type="text"
-              pattern="-?[0-9]*(\.[0-9]+)?"
-              id="base-of-triangle"
-            />
-            <label class="mdl-textfield__label" for="length-of-rectangle">Base ...</label>
-            <span class="mdl-textfield__error">Input is not a number!</span>
-          </div>
-        </form></center>
-				
-        <!-- Numeric Textfield -->
-        <center><form action="#">
-          <p>Height</p>
-          <div class="mdl-textfield mdl-js-textfield">
-            <input
-              class="mdl-textfield__input"
-              type="text"
-              pattern="-?[0-9]*(\.[0-9]+)?"
-              id="height-of-triangle"
-            />
-            <label class="mdl-textfield__label" for="width-of-rectangle">Height ...</label>
-            <span class="mdl-textfield__error">Input is not a number!</span>
-          </div>
-        </form></center>
-				
-        <!-- Raised button with ripple -->
-        <center><button
-          class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
-          onclick="calculate()"
-        >
-          Calculate
-        </button></center>
-        <br />
-        <center><p>
-          <div id="answers">
-            <div id="area"></div>
-          </div>
-        </p></center>
-      </main>
-    </div>
-  </body>
+    <h1>Salary Program, with a JS file</h1>
+    <p>
+      <h3>Please Enter Your Employment Information:</h3>
+      <form action="javascript:payClicked()">
+        <label for="Hours">Number of Hours Worked:</label>
+        <input type="number" step="any" id="hours" placeholder="Hours"><br><br>
+        <label for="hourly-rate">Hourly Rate: $</label>
+        <input type="number" step="any" id="rate" placeholder="Rate"><br><br>
+        <input type="submit" value="Pay">
+      </form>
+    </p>
+		<!-- Create a space where the user information will be displayed -->
+		<div id="display-results">
+    	<div id="total-earned"></div>
+			<div id="tax"></div>
+		</div>
+  </body></center>
 </html>
